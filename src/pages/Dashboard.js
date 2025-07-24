@@ -12,20 +12,9 @@ function Dashboard() {
   return (
     <div className="dashboard-container px-4 py-3">
       <Topbar />
-
-      {/* Stats Cards Section */}
       <div className="row mb-4">
-        <div className="col-md-4 mb-3">
-          <StatsCards type="balance" />
-        </div>
-        <div className="col-md-4 mb-3">
-          <StatsCards type="sales" />
-        </div>
-        <div className="col-md-4 mb-3">
-          <StatsCards type="upgrade" />
-        </div>
+        <StatsCards />
       </div>
-
       {/* Charts Section */}
       <div className="row mb-4">
         <div className="col-md-6 mb-3">
@@ -35,7 +24,6 @@ function Dashboard() {
           <MonthlyProfitsChart />
         </div>
       </div>
-
       {/* Tables Section */}
       <div className="row">
         <div className="col-md-6 mb-3">

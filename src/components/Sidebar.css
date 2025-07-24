@@ -5,12 +5,14 @@
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem; /* Increased base font size */
 }
 
 .sidebar .nav-item {
   padding: 12px 20px;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-size: 1.1rem; /* Increased nav item font size */
 }
 
 .sidebar .nav-item:hover,
@@ -22,9 +24,4 @@
 .sidebar .nav-item i,
 .sidebar .nav-item svg {
   font-size: 16px;
-}
-.sidebar {
-  background-color: #1f1f1f;
-  height: 100vh;
-  position: fixed;
 }
