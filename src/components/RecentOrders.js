@@ -10,7 +10,9 @@ function RecentOrders() {
   return (
     <Card className="mt-4 shadow-sm">
       <Card.Body>
-        <Card.Title className="mb-3">Recent Orders</Card.Title>
+        <div style={{ background: '#a0aecd', borderRadius: '8px', padding: '0.5rem 1rem', marginBottom: '1rem' }}>
+          <Card.Title className="mb-3" style={{ fontSize: '1.5rem', color: '#333', margin: 0 }}>Recent Orders</Card.Title>
+        </div>
         <Table responsive bordered hover>
           <thead>
             <tr>

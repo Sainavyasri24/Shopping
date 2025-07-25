@@ -48,7 +48,9 @@ function WeeklyUsersChart() {
   return (
     <Card className="mt-4 shadow-sm">
       <Card.Body>
-        <Card.Title>Users In The Last Week</Card.Title>
+        <div style={{ background: '#F2BFA4', borderRadius: '8px', padding: '0.5rem 1rem', marginBottom: '1rem' }}>
+          <Card.Title style={{ fontSize: '1.7rem', color: '#333', margin: 0 }}>Users In The Last Week</Card.Title>
+        </div>
         <Bar data={data} options={options} />
       </Card.Body>
     </Card>

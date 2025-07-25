@@ -47,9 +47,23 @@ function MonthlyProfitsChart() {
   return (
     <Card className="mt-4 shadow-sm">
       <Card.Body>
-        <Card.Title>Monthly Profits</Card.Title>
-        <h5 className="mb-3">Total Sales: 76,343</h5>
-        <Pie data={data} options={options} />
+        <div style={{ background: '#F49CC4', borderRadius: '8px', padding: '0.5rem 1rem', marginBottom: '1rem' }}>
+          <Card.Title style={{ fontSize: '1.7rem', color: '#333', margin: 0 }}>Monthly Profits</Card.Title>
+          <h5 className="mb-3" style={{ fontSize: '1.3rem', color: '#333', margin: 0 }}>Total Sales: 76,343</h5>
+        </div>
+        <div
+  style={{
+    height: '600px',
+    width: '600px',
+    display: 'flex',
+    justifyContent: 'center',  // center horizontally
+    alignItems: 'center',      // center vertically
+    margin: '0 auto',          // center the wrapper in parent
+  }}
+>
+  <Pie data={data} options={{ ...options, maintainAspectRatio: false }} />
+</div>
+
       </Card.Body>
     </Card>
   );

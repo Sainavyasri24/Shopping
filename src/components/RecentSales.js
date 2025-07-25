@@ -15,13 +15,13 @@ function RecentSales() {
     <Card className="mt-4 shadow-sm">
       <Card.Body>
         <div className="d-flex justify-content-between align-items-center mb-3">
-          <Card.Title className="mb-0">Recent Sales</Card.Title>
-          <a href="#!" style={{ fontSize: '0.9rem' }}>See All</a>
+          <Card.Title className="mb-0" style={{ fontSize: '1.5rem', background: '#E7D3BB', padding: '0.5rem 1rem', borderRadius: '8px', color: '#333' }}>Recent Sales</Card.Title>
+          <a href="#" style={{ fontSize: '1.1rem' }}>See All</a>
         </div>
-        <ListGroup variant="flush">
+        <ListGroup variant="flush" style={{ background: '#E7D3BB', borderRadius: '8px', fontSize: '1.1rem' }}>
           {recentSales.map((sale, idx) => (
-            <ListGroup.Item key={idx} className="d-flex align-items-center">
-              <Image src={sale.avatar} roundedCircle width={40} height={40} className="me-3" />
+            <ListGroup.Item key={idx} className="d-flex align-items-center" style={{ background: '#E7D3BB', fontSize: '1.1rem', padding: '1.1rem 0' }}>
+              <Image src={sale.avatar} roundedCircle width={50} height={50} className="me-3" />
               <div className="flex-grow-1">
                 <strong>{sale.name}</strong><br />
                 <small className="text-muted">{sale.time}</small>
