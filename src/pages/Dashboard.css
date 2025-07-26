@@ -67,4 +67,40 @@
   .dot-black {
     background-color: #000;
   }
+  .card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    border-radius: 6px;
+  }
+  h5 {
+    font-weight: 600;
+  }
+  .badge {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  .section-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-heading::before {
+    content: '💳';
+    font-size: 1.4rem;
+  }
+  .highlight-heading {
+    color: #ff9800;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+    background: #fff3e0;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  
   

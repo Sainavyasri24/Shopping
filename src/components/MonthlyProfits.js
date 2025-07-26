@@ -52,17 +52,17 @@ function MonthlyProfitsChart() {
           <h5 className="mb-3" style={{ fontSize: '1.3rem', color: '#333', margin: 0 }}>Total Sales: 76,343</h5>
         </div>
         <div
-  style={{
-    height: '600px',
-    width: '600px',
-    display: 'flex',
-    justifyContent: 'center',  // center horizontally
-    alignItems: 'center',      // center vertically
-    margin: '0 auto',          // center the wrapper in parent
-  }}
->
-  <Pie data={data} options={{ ...options, maintainAspectRatio: false }} />
-</div>
+          style={{
+            height: '600px',
+            width: '600px',
+            display: 'flex',
+            justifyContent: 'center',  // center horizontally
+            alignItems: 'center',      // center vertically
+            margin: '0 auto',          // center the wrapper in parent
+          }}
+        >
+          <Pie data={data} options={{ ...options, maintainAspectRatio: false }} />
+        </div>
 
       </Card.Body>
     </Card>

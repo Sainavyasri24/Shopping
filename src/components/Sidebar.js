@@ -1,8 +1,13 @@
+
 //Sidebar.js
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 
-function Sidebar() {
+const Sidebar = ({ theme }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   return (
     <div className="sidebar text-white p-3" style={{ width: '250px', background: '#1f1f1f', minHeight: '100vh' }}>
       <div className="text-center mb-4">
@@ -18,21 +23,40 @@ function Sidebar() {
       </div>
 
       <ul className="nav flex-column">
-        <li className="nav-item mb-2"><a href="#" className="nav-link text-white">📊 Dashboard</a></li>
-        <li className="nav-item mb-2"><a href="#" className="nav-link text-white">📈 Statistics</a></li>
-        <li className="nav-item mb-2"><a href="#" className="nav-link text-white">⚙️ Settings</a></li>
-        <li className="nav-item mb-2"><a href="#" className="nav-link text-white">👥 Customers</a></li>
-        <li className="nav-item mb-2"><a href="#" className="nav-link text-white">✉️ Messages</a></li>
-        <li className="nav-item mb-2"><a href="#" className="nav-link text-white">📦 Products</a></li>
+        <li className="nav-item mb-2">
+          <div onClick={() => navigate('/')} className="nav-link text-white" style={{ cursor: 'pointer' }}>
+            📊 Dashboard
+          </div>
+        </li>
+        <li className="nav-item mb-2">
+          <div onClick={() => navigate('/statistics')} className="nav-link text-white" style={{ cursor: 'pointer' }}>
+            📈 Statistics
+          </div>
+        </li>
+        <li className="nav-item mb-2">
+          <div onClick={() => navigate('/settings')} className="nav-link text-white" style={{ cursor: 'pointer' }}>
+            ⚙️ Settings
+          </div>
+        </li>
+        <li className="nav-item mb-2">
+          <div onClick={() => navigate('/customers')} className="nav-link text-white" style={{ cursor: 'pointer' }}>
+            👥 Customers
+          </div>
+        </li>
+        <li className="nav-item mb-2">
+          <div onClick={() => navigate('/products')} className="nav-link text-white" style={{ cursor: 'pointer' }}>
+            📦 Products
+          </div>
+        </li>
         <li className="nav-item">
-          <a href="#" className="nav-link text-white">
+          <div onClick={() => navigate('/transactions')} className="nav-link text-white" style={{ cursor: 'pointer' }}>
             <span style={{ fontSize: '1.1rem', verticalAlign: 'middle' }}>🔄</span>
             <span style={{ marginLeft: '8px', verticalAlign: 'middle' }}>Transactions</span>
-          </a>
+          </div>
         </li>
       </ul>
     </div>
   );
-}
+};
 
 export default Sidebar;
